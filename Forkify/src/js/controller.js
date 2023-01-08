@@ -14,7 +14,7 @@ import { async } from 'regenerator-runtime';
 // if (module.hot) {
 //   module.hot.accept();
 // }
-
+// functions needed
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
