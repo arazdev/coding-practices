@@ -45,7 +45,7 @@ const upload = ({ storage });
 
 //Routes with files//
 app.post('/auth/register', upload.single('picture'), register);
-app.post('/posts', verifyToken, upload.single('picture'), createPost)
+app.post('/posts', verifyToken, upload.single('picture'), createPost);
 
 //Routes//
 app.use('/auth', authRoutes);
