@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cron": "^3.1.7",
     "node-cron": "^3.0.3",
     "simple-git": "^3.25.0"
   }
