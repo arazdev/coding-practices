@@ -41,7 +41,7 @@ const storage = multer.diskStorage({
         cb(null, file.originalname);
     }
 })
-const upload = ({ storage });
+const upload = multer({ storage });
 
 //Routes with files//
 app.post('/auth/register', upload.single('picture'), register);
@@ -61,6 +61,6 @@ mongoose.connect(process.env.MONGO_URL, {
     app.listen(PORT, () => console.log(`Server PORT: ${PORT}`));
 
     //Add data one time//
-    User.insertMany(users);
-    Post.insertMany(posts);
+    // User.insertMany(users);
+    // Post.insertMany(posts);
 }).catch((error) => console.log(`${error} did not connect`));
